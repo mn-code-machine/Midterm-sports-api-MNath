@@ -10,7 +10,7 @@ const PORT = 8080;
 // 4. Allow JSON parsing
 app.use(express.json());
 
-// 5. Initial sports array
+// 5. Initial sports arra
 let sports = ["Soccer", "HandBall", "VolleyBall", "Cricket", "Swimming"];
 
 // 6. Routes
