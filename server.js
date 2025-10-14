@@ -1,19 +1,24 @@
+
+//By Maharaj Nath
+//Midterm
+//COMP229
+//API Project
+
+
 // 1. Import express
 const express = require("express");
 
-// 2. Create the app
+
 const app = express();
 
-// 3. Set the port
 const PORT = 8080;
 
-// 4. Allow JSON parsing
 app.use(express.json());
 
-// 5. Initial sports arra
+
 let sports = ["Soccer", "HandBall", "VolleyBall", "Cricket", "Swimming"];
 
-// 6. Routes
+ Routes
 
 // GET all sports
 app.get("/api/MNathitems", (req, res) => {
@@ -21,7 +26,7 @@ app.get("/api/MNathitems", (req, res) => {
   res.json(data);
 });
 
-// GET sport by ID
+//get
 app.get("/api/MNathitems/:id", (req, res) => {
   const id = parseInt(req.params.id);
   if (id >= 0 && id < sports.length) {
@@ -66,7 +71,7 @@ app.delete("/api/MNathitems/:id", (req, res) => {
   res.json({ message: "Sport deleted", deleted: deletedSport });
 });
 
-// 7. Start server
+// 7. Starting server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
